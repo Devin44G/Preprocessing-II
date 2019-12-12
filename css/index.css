@@ -231,11 +231,6 @@ img {
 .header .header-section .header-text {
   padding: 2rem 0 1rem;
 }
-@media (max-width: 500px) {
-  .header {
-    width: 90%;
-  }
-}
 .home .content-section {
   margin: 30px 0;
   display: flex;
@@ -268,6 +263,9 @@ img {
 .home .content-section .img-content img {
   border-radius: 10px;
 }
+.home .content-section .img-content img:hover {
+  animation: anim 2s 1;
+}
 .home .inverse-content {
   padding-bottom: 30px;
   border-bottom: 2px dashed #C0C0C0;
@@ -292,6 +290,9 @@ img {
 .home .content-destination img {
   border-radius: 10px;
 }
+.home .content-destination img:hover {
+  animation: anim 2s 1;
+}
 .home .content-pick {
   padding-top: 30px;
   border-top: 2px dashed #C0C0C0;
@@ -306,7 +307,6 @@ img {
   .home .content-pick {
     flex-direction: column;
     align-items: center;
-    border: solid 1px black;
   }
   .home .content-pick .destination {
     width: 90%;
@@ -321,8 +321,27 @@ img {
   text-align: center;
   width: 90%;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   html {
     font-size: 53%;
+  }
+  html .header {
+    width: 98%;
+  }
+  html .home {
+    width: 98%;
+  }
+}
+@media (max-width: 900px) and (max-width: 500px) {
+  html .header {
+    width: 90%;
+  }
+}
+@keyframes anim {
+  50% {
+    border-radius: 50px;
+  }
+  100% {
+    border-radius: 10px;
   }
 }
